@@ -8,26 +8,23 @@ const DefaultTable = (props) => {
             <Table striped bordered hover>
                 <thead>
                     <tr>
-                        <th>#</th>
                         <th>Nombre</th>
                         <th>Apellido</th>
                         <th>Año</th>
-                        <th>Materia</th>
-                        <th>Condicion</th>
                     </tr>
                 </thead>
                 <tbody>
                     {
                         props.alumnos.map((alumno, index) => {
-                            return (
+                            if(alumno.materias_aprobadas>=3 && alumno.nombre!=null)
+                            {
+                                 return (
                                 <tr key={index}>
-                                    <td>{alumno.id}</td>
                                     <td>{alumno.nombre}</td>
                                     <td>{alumno.apellido}</td>
-                                    <td>{alumno.año}</td>
-                                    <td>{alumno.materia}</td>
-                                    <td>{alumno.condicion}</td>
+                                    <td>{alumno.anio}</td>
                                 </tr>)
+                            }
                         })
                     }
                 </tbody>

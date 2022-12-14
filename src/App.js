@@ -31,7 +31,7 @@ function App() {
   
   return (
     <div style={{ padding: '50px', fontFamily:'roboto' }}>
-      <h1>Alumnos</h1>
+      <h1>Alumnos Promocionados</h1>
       <DefaultTable alumnos={alumnos} />
     </div>
   );
